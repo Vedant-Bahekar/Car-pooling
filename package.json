@@ -1,0 +1,9 @@
+{
+  "name": "school-ride-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Weekly ride dues tracker for school carpooling",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0"
+  }
+}

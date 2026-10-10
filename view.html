@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#F7F8F7" />
+  <title>View – School Ride Tracker</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="container" id="app">
+    <a href="/" class="home-link">Home</a>
+    <h1 class="page-title">School Ride Tracker</h1>
+    <p class="page-subtitle">Weekly ride dues</p>
+
+    <!-- Week navigation -->
+    <div class="week-nav">
+      <button class="nav-btn" id="prev-week">‹</button>
+      <div class="week-display">
+        <span class="week-range" id="week-range">Loading…</span>
+        <span class="week-rate" id="week-rate"></span>
+      </div>
+      <button class="nav-btn" id="next-week">›</button>
+    </div>
+    <a href="#" class="back-link" id="back-to-current" style="display:none">Back to this week</a>
+
+    <!-- Summary -->
+    <div class="summary-tiles">
+      <div class="tile">
+        <div class="tile-label">This week</div>
+        <div class="tile-value" id="total-due">—</div>
+      </div>
+      <div class="tile">
+        <div class="tile-label">Collected</div>
+        <div class="tile-value" id="total-collected">—</div>
+      </div>
+      <div class="tile">
+        <div class="tile-label">To collect</div>
+        <div class="tile-value" id="total-to-collect">—</div>
+      </div>
+    </div>
+
+    <!-- Rider cards (JS-rendered) -->
+    <div id="rider-cards">
+      <p class="loading">Loading…</p>
+    </div>
+
+    <!-- History (JS-rendered) -->
+    <div id="history-section"></div>
+
+    <!-- Overall (JS-rendered) -->
+    <div id="overall-card"></div>
+
+    <!-- Footer -->
+    <div class="page-footer">
+      <p id="last-updated"></p>
+      <a href="/edit">Edit</a>
+    </div>
+  </div>
+
+  <script type="module" src="/js/view.js"></script>
+</body>
+</html>
