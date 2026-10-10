@@ -12,10 +12,7 @@ function validateAction(action, params) {
     case 'toggle-attendance': {
       if (!params.riderId || !UUID_RE.test(params.riderId)) return fail('Invalid rider ID');
       if (!params.date || !DATE_RE.test(params.date)) return fail('Invalid date');
-      const d = new Date(params.date + 'T00:00:00+05:30');
-      if (isNaN(d)) return fail('Invalid date');
-      if (d.getUTCDay() === 0 && d.getUTCHours() < 19) return fail('Cannot mark attendance on Sunday');
-      // More lenient: just check the date parses and isn't Sunday in IST
+
       break;
     }
 
